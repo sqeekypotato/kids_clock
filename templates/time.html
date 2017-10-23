@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+    <script src="static/jquery-3.2.0.min.js"></script>
+    <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+    <script src="static/time.js"></script>
+    <script src="static/weather.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--weather styling-->
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='weather.css') }}">
+</head>
+
+<body>
+<div class="container">
+    <div class="col-12">
+
+<div class="col-xs-12" id="clock">
+    <font color="white"><span id="hour">{{ hour }}</span><span>:</span><span id="tens">{{ tens }}</span><span id="ones">{{ ones }}</span><span id="other" >{{ other }}</span></font>
+</div>
+
+{{ weather_symbol|safe }}
+</div>
+</div>
+</body>
+</html>
