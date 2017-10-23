@@ -3,6 +3,24 @@ my_location = "Toronto"
 
 
 
+def highlight_temperature(temperature):
+    temperature_scale = {
+        'Hot': '.text-muted',
+        'Warm': '.text-muted',
+        'Cool': '.text-muted',
+        'Cold': '.text-muted',
+    }
+
+    if temperature > 22:
+        temperature_scale['Hot'] = 'text-danger'
+    if 22 > temperature > 12:
+        temperature_scale['Warm'] = 'text-danger'
+    if 12 > temperature > 5:
+        temperature_scale['Cool'] = 'text-danger'
+    if temperature < 5:
+        temperature_scale['Cold'] = 'text-danger'
+    return  temperature_scale
+
 weather_words = {
     "tornado": "thunderstorms",
     "tropical storm": "thunderstorms",

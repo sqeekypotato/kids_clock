@@ -307,12 +307,15 @@ p { margin: 1.375rem 0; }
 }
 
 #clock{
-    padding-top: 30px;
-    font: 55px arial;
+    font-size: 55px;
     text-align: center;
 }
 
 #other{
     font-size: .5em;
     color: white;
+}
+
+.temperature{
+    padding-top: 10px;
 }
