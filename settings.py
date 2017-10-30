@@ -67,6 +67,8 @@ weather_words = {
     "thundershowers": "thunderstorms",
     "snow showers": "flurries",
     "isolated thundershowers": "thunderstorms",
+    "rain": "rainy",
+    "breezy": "cloudy",
 }
 
 weather_symbols = {
