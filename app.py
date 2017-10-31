@@ -12,6 +12,7 @@ def time():
     # handles weather
     weather_result = forcast()
     weather_text = weather_result[0].lower()
+    temp = weather_result[1]
     weather_symbol = weather_symbols[weather_words[weather_text]]
     temperature_scale = highlight_temperature(weather_result[1])
 
@@ -25,12 +26,14 @@ def time():
     # returns information to page on refresh
     if request.method == "POST":
         result = {'hour':hour, 'tens':tens, 'ones':ones, 'other':other,
-                  'weather_symbol':weather_symbol, 'temperature_scale':temperature_scale}
+                  'weather_symbol':weather_symbol, 'temperature_scale':temperature_scale,
+                  'text':weather_text, 'temp':temp}
         return jsonify(result)
 
     # provides information the first time the page loads
     return render_template('time.html', hour=hour, tens=tens, ones=ones, other=other,
-                           weather_symbol=weather_symbol, temperature_scale=temperature_scale)
+                           weather_symbol=weather_symbol, temperature_scale=temperature_scale,
+                           text=weather_text, temp=temp)
 
 
 if __name__ == "__main__":
