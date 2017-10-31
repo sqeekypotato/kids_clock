@@ -11,7 +11,7 @@ from settings import my_location
 #     celcius = forcasts[0].high()
 #     high_temp = int((int(celcius)-32)/1.8)
 
-
+forcast_counter = 0
 
 def forcast():
     print('getting weather')
