@@ -307,18 +307,13 @@ p { margin: 1.375rem 0; }
 }
 
 #clock{
-    font-size: -webkit-xxx-large;
+    font-size: 5em;
     text-align: center;
-}
-
-#other{
-    font-size: x-large;
-    color: white;
 }
 
 .temperature{
     padding-top: 10px;
-    font-size: medium;
+    font-size: 1.5em;
 }
 
 .container{
