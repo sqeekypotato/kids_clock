@@ -6,7 +6,6 @@
     <script src="static/jquery-3.2.0.min.js"></script>
     <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
     <script src="static/time.js"></script>
-    <script src="static/weather.js"></script>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,13 +27,15 @@
     <div class="col-xs-9">
 
         <div class="col-xs-12" id="clock">
-            <font color="white"><span id="hour">{{ hour }}</span><span>:</span><span id="tens">{{ tens }}</span><span id="ones">{{ ones }}</span><sub>{{ other }}</sub></font>
+            <font color="white"><span id="hour">{{ hour }}</span><span>:</span><span id="tens">{{ tens }}</span><span id="ones">{{ ones }}</span><span id="other" >{{ other }}</span></font>
         </div>
+        <div class="weather">
         {{ weather_symbol|safe }}
         <p>{{ text }}   {{ temp }} <sup>0</sup> C  </p>
+        </div>
     </div>
 
-    <div class="col-xs-3 temperature" >
+    <div class="col-xs-3 temperature weather" >
         <p><font class="{{ temperature_scale['Hot'] }}"> Hot </font></p>
         <p><font class="{{ temperature_scale['Warm'] }}"> Warm </font></p>
         <p><font class="{{ temperature_scale['Cool'] }}"> Cool </font></p>

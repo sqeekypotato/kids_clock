@@ -306,6 +306,11 @@ p { margin: 1.375rem 0; }
   }
 }
 
+#other{
+    font-size: .5em;
+    color: white;
+}
+
 #clock{
     font-size: 5em;
     text-align: center;

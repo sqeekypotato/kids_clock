@@ -4,6 +4,8 @@ console.log("read to time!")
 var hour = 0;
 var tens = 0;
 var ones = 0;
+var other = '';
+var weather = '';
 
 
 setInterval(function() {
@@ -58,6 +60,14 @@ function checkOther(value){
     }
 }
 
-
+function checkWeather(value){
+    if (value != weather){
+    $('.weather').fadeToggle('slow', function(){
+        if ($(this).is(':hidden')) {$('.weather').text(value);}
+    });
+    $('.weather').fadeToggle('slow');
+    weather = value;
+    }
+}
 
 });
