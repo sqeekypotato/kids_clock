@@ -11,7 +11,7 @@ app = Flask(__name__)
 def time():
     global counter, weather_symbol, temperature_scale, weather_text, temp
     # handles weather
-    if counter > 10:
+    if counter > 3600:
         weather_result = forcast()
         weather_text = weather_result[0].lower()
         temp = weather_result[1]
