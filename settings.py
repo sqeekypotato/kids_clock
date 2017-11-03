@@ -19,7 +19,16 @@ def highlight_temperature(temperature):
         temperature_scale['Cool'] = 'text-danger'
     if temperature < 5:
         temperature_scale['Cold'] = 'text-danger'
-    return  temperature_scale
+
+    return_value = '''
+        <div class="col-xs-3 temperature weather" >
+            <p><font class="{}"> Hot </font></p>
+            <p><font class="{}"> Warm </font></p>
+            <p><font class="{}"> Cool </font></p>
+            <p><font class="{}"> Cold </font></p>
+        </div>
+    '''.format(temperature_scale['Hot'],temperature_scale['Warm'],temperature_scale['Cool'],temperature_scale['Cold'])
+    return  return_value
 
 weather_words = {
     "tornado": "thunderstorms",

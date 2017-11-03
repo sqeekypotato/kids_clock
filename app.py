@@ -5,8 +5,6 @@ from weather_API import forcast
 
 app = Flask(__name__)
 
-
-
 @app.route("/", methods = ['GET', 'POST'])
 def time():
     global counter, weather_symbol, temperature_scale, weather_text, temp
@@ -16,7 +14,8 @@ def time():
         weather_text = weather_result[0].lower()
         temp = weather_result[1]
         weather_symbol = weather_symbols[weather_words[weather_text]]
-        temperature_scale = highlight_temperature(weather_result[1])
+        temperature_scale = highlight_temperature(temp)
+        weather_text = weather_text + ' ' + str(temp)
         counter = 0
 
     # handles time
@@ -32,13 +31,13 @@ def time():
         print (counter)
         result = {'hour':hour, 'tens':tens, 'ones':ones, 'other':other,
                   'weather_symbol':weather_symbol, 'temperature_scale':temperature_scale,
-                  'text':weather_text, 'temp':temp}
+                  'text':weather_text}
         return jsonify(result)
 
     # provides information the first time the page loads
     return render_template('time.html', hour=hour, tens=tens, ones=ones, other=other,
                            weather_symbol=weather_symbol, temperature_scale=temperature_scale,
-                           text=weather_text, temp=temp)
+                           text=weather_text)
 
 
 if __name__ == "__main__":
@@ -47,7 +46,8 @@ if __name__ == "__main__":
     weather_text = weather_result[0].lower()
     temp = weather_result[1]
     weather_symbol = weather_symbols[weather_words[weather_text]]
-    temperature_scale = highlight_temperature(weather_result[1])
+    temperature_scale = highlight_temperature(temp)
+    weather_text = weather_text + ' ' + str(temp)
 
     app.run(debug=True)
 

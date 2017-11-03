@@ -5,7 +5,9 @@ var hour = 0;
 var tens = 0;
 var ones = 0;
 var other = '';
-var weather = '';
+var weather_icon = '';
+var weather_text = '';
+var weather_scale = '';
 
 
 setInterval(function() {
@@ -15,7 +17,11 @@ setInterval(function() {
         checkTens(results['tens']);
         checkHours(results['hour']);
         checkOther(results['other']);
-        $("#PM").text(results['PM']);
+//        $("#PM").text(results['PM']);
+        checkWeatherIcon(results['weather_symbol']);
+        checkWeatherText(results['text']);
+        checkWeatherScale(results['temperature_scale'])
+        console.log(results['weather_symbol'])
     });
 }, 1000); //1 seconds
 
@@ -60,13 +66,27 @@ function checkOther(value){
     }
 }
 
-function checkWeather(value){
-    if (value != weather){
-    $('.weather').fadeToggle('slow', function(){
-        if ($(this).is(':hidden')) {$('.weather').text(value);}
+function checkWeatherIcon(value){
+    if (value != weather_icon){
+    $('#weather_icon').html(value);
+    weather_icon = value;
+    }
+}
+
+function checkWeatherText(value){
+    if (value != weather_text){
+    $('#weather_text').fadeToggle('slow', function(){
+        if ($(this).is(':hidden')) {$('#weather_text').text(value);}
     });
-    $('.weather').fadeToggle('slow');
-    weather = value;
+    $('#weather_text').fadeToggle('slow');
+    weather_text = value;
+    }
+}
+
+function checkWeatherScale(value){
+    if (value != weather_scale){
+    $('#temperature_scale').empty().append(value);
+    weather_scale = value;
     }
 }
 
