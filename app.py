@@ -49,6 +49,6 @@ if __name__ == "__main__":
     temperature_scale = highlight_temperature(temp)
     weather_text = weather_text + ' ' + str(temp)
 
-    app.run(debug=True)
+    app.run()
 
     # app.run(host= '0.0.0.0')
