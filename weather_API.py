@@ -27,3 +27,5 @@ def forcast():
 #     from settings import weather_words
 #     print('getting weather')
 #     return (random.choice(list(weather_words)), random.randint(0, 30))
+
+print (forcast())

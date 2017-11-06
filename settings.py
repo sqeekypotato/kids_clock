@@ -13,11 +13,11 @@ def highlight_temperature(temperature):
 
     if temperature > 22:
         temperature_scale['Hot'] = 'text-danger'
-    if 22 > temperature > 12:
+    if 22 >= temperature > 12:
         temperature_scale['Warm'] = 'text-danger'
-    if 12 > temperature > 5:
+    if 12 >= temperature > 5:
         temperature_scale['Cool'] = 'text-danger'
-    if temperature < 5:
+    if temperature <= 5:
         temperature_scale['Cold'] = 'text-danger'
 
     return_value = '''

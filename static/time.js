@@ -27,10 +27,10 @@ setInterval(function() {
 
 function checkOnes(value){
     if (value != ones){
-    $('#ones').slideToggle('slow', function(){
+    $('#ones').fadeToggle('slow', function(){
         if ($(this).is(':hidden')) {$('#ones').text(value);}
     });
-    $('#ones').slideToggle('slow');
+    $('#ones').fadeToggle('slow');
     ones = value;
     }
 
@@ -38,30 +38,30 @@ function checkOnes(value){
 
 function checkTens(value){
     if (value != tens){
-    $('#tens').slideToggle('slow', function(){
+    $('#tens').fadeToggle('slow', function(){
         if ($(this).is(':hidden')) {$('#tens').text(value);}
     });
-    $('#tens').slideToggle('slow');
+    $('#tens').fadeToggle('slow');
     tens = value;
     }
 }
 
 function checkHours(value){
     if (value != hour){
-    $('#hour').slideToggle('slow', function(){
+    $('#hour').fadeToggle('slow', function(){
         if ($(this).is(':hidden')) {$('#hour').text(value);}
     });
-    $('#hour').slideToggle('slow');
+    $('#hour').fadeToggle('slow');
     hour = value;
     }
 }
 
 function checkOther(value){
     if (value != other){
-    $('#other').slideToggle('slow', function(){
+    $('#other').fadeToggle('slow', function(){
         if ($(this).is(':hidden')) {$('#other').text(value);}
     });
-    $('#other').slideToggle('slow');
+    $('#other').fadeToggle('slow');
     other = value;
     }
 }
