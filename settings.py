@@ -78,6 +78,7 @@ weather_words = {
     "isolated thundershowers": "thunderstorms",
     "rain": "rainy",
     "breezy": "cloudy",
+    'mostly cloudy':"sun_cloud",
 }
 
 weather_symbols = {
