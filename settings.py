@@ -79,7 +79,7 @@ weather_words = {
     "rain": "rainy",
     "breezy": "cloudy",
     'mostly cloudy':"sun_cloud",
-    'mostly sunny':"sun_cloud",
+
 }
 
 weather_symbols = {
