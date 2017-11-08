@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, jsonify
 from time import strftime
-from settings import weather_symbols, weather_words, highlight_temperature
 from weather_API import GetWeather
 
 app = Flask(__name__)
@@ -33,7 +32,6 @@ def time():
     return render_template('time.html', hour=hour, tens=tens, ones=ones, other=other,
                            weather_symbol=weather_result.weather_symbol, temperature_scale=weather_result.temperature_scale,
                            text=weather_result.weather_text)
-
 
 if __name__ == "__main__":
     counter = 100

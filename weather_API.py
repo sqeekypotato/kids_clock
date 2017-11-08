@@ -1,5 +1,4 @@
 from weather import Weather
-import random
 
 from settings import my_location, weather_words, weather_symbols, highlight_temperature
 from error_logging import LogFile
@@ -62,8 +61,6 @@ class GetWeather:
                 # if all else fails, it just makes the symbol sun_cloud
                 weather_symbol = weather_symbols['sun_cloud']
         return weather_symbol
-
-
 
     def weather_call(self):
         print('updating weather')

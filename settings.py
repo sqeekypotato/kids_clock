@@ -1,8 +1,6 @@
 
 my_location = "Toronto"
 
-forcast_counter = 0
-
 def highlight_temperature(temperature):
     temperature_scale = {
         'Hot': '.text-muted',
