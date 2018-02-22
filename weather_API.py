@@ -10,7 +10,6 @@ class GetWeather:
     lookup = ''
     forcasts = ''
     todays_forcast = ''
-    fahrenheit = ''
     celcius = ''
     temperature_scale = ''
     weather_text = ''
@@ -67,8 +66,7 @@ class GetWeather:
         self.lookup = self.weather.lookup_by_location(my_location)
         self.forcasts = self.lookup.forecast()
         self.todays_forcast = self.forcasts[0].text().lower()
-        self.fahrenheit = self.forcasts[0].high()
-        self.celcius = int((int(self.fahrenheit) - 32) / 1.8)
+        self.celcius = int(self.forcasts[0].high())
         self.temperature_scale = highlight_temperature(self.celcius)
         self.weather_text = self.todays_forcast + ' ' + str(self.celcius)
         self.weather_symbol = self.get_symbol(self.todays_forcast)

@@ -19,9 +19,8 @@ def to_celcuis(temp):
     return int((int(temp)-32)/1.8)
 
 lookup = weather.lookup_by_location("Toronto")
-condition = lookup.condition()
-print(condition['text'])
+
 
 forcasts = lookup.forecast()
 for i in forcasts:
-    print(i.date(), i.text(), to_celcuis(i.high()))
+    print(i.date(), i.text(), i.high())
